@@ -1,5 +1,3 @@
-# src/evaluate.py
-
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
@@ -22,7 +20,7 @@ BATCH_SIZE = 32
 NUM_CLASSES = 8
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-# ==================== 전처리 정의 ====================
+# 전처리 정의
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),])

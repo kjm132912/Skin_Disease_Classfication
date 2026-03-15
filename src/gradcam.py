@@ -13,8 +13,7 @@ IMAGE_PATH = "D:/Project/Skin_Disease_Classfication/data/ISIC_2019_Training_Inpu
 # 전처리
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.ToTensor()
-])
+    transforms.ToTensor()])
 
 image = Image.open(IMAGE_PATH).convert("RGB")
 input_tensor = transform(image).to(DEVICE)

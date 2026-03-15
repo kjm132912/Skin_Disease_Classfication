@@ -28,8 +28,7 @@ SAVE_PATH = "D:/Project/Skin_Disease_Classfication/checkpoints/best_model_weight
 # 이미지 전처리 정의
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.ToTensor()
-])
+    transforms.ToTensor()])
 
 # 전체 데이터셋 로드
 dataset = ISICDataset(IMAGE_DIR, CSV_PATH, transform=transform)
